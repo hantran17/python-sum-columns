@@ -26,8 +26,7 @@ for line in df[column_headers[column_number]]:
     if line is not str:
         final = df[column_headers[column_number -1]].sum()
     else:
-        print("Invalid value")
-        break
+        continue
 
 
 #people may come and go, but string must stay
