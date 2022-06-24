@@ -11,6 +11,7 @@ if len(sys.argv) <= 1:
     print("\n")
     exit(0)
 
+
 file_name = (str(sys.argv[1]))
 column_number = (int(sys.argv[2]))
 
@@ -23,10 +24,10 @@ column_headers = list(df.columns.values)  #Get the list of all column names from
 #Sum of inputed column number
 for line in df[column_headers[column_number]]:
     if line is not str:
-        final = df[column_headers[column_number -1]].sum()  #Anyway to work with str or multiple numbers in a cell?
-						   #Fail if not an appropriate num?   
+        final = df[column_headers[column_number -1]].sum()
     else:
-        continue
+        print("Invalid value")
+        break
 
 
 #people may come and go, but string must stay
